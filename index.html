@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio</title>
+  <meta name="description" content="Web designer and developer portfolio.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="is-loading">
+
+  <!-- Preloader -->
+  <div class="loader" aria-hidden="true">
+    <p class="loader__line"><em>Every site starts as a blank page.</em></p>
+    <p class="loader__count mono"><span data-loader-count>000</span></p>
+  </div>
+
+  <!-- Navigation -->
+  <header class="nav">
+    <a class="nav__logo" href="#top" data-name></a>
+    <nav class="nav__links" aria-label="Main">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#index">Index</a>
+    </nav>
+    <a class="pill pill--solid nav__cta" href="#contact">Let's talk</a>
+  </header>
+
+  <main id="top">
+
+    <!-- Intro: the first thing people see -->
+    <section class="intro" id="intro">
+      <svg class="intro__orbits" viewBox="-500 -500 1000 1000" aria-hidden="true">
+        <g class="orbit"><circle r="210"></circle><circle class="orbit__dot" cx="210" r="5"></circle></g>
+        <g class="orbit"><circle r="330"></circle><circle class="orbit__dot" cx="-330" r="4"></circle></g>
+        <g class="orbit"><circle r="460"></circle><circle class="orbit__dot" cy="460" r="6"></circle></g>
+      </svg>
+      <div class="intro__inner">
+        <p class="mono intro__eyebrow" data-role></p>
+        <h1 class="intro__title" data-split>Websites that move, <em>built by hand.</em></h1>
+        <div class="intro__row">
+          <p class="intro__text" data-intro></p>
+          <div class="intro__cta">
+            <a class="pill pill--solid" href="#work">See the work</a>
+            <a class="pill" href="#contact">Get in touch</a>
+          </div>
+        </div>
+      </div>
+      <div class="intro__foot mono">
+        <span data-location></span>
+        <span class="intro__scroll">Scroll <i></i></span>
+        <span data-time></span>
+      </div>
+    </section>
+
+    <!-- Journey: hero + project drift + sea of screenshots (one pinned stage) -->
+    <section class="journey" id="work" aria-label="Selected work">
+      <canvas class="sea" aria-hidden="true"></canvas>
+      <div class="sea__veil" aria-hidden="true"></div>
+
+      <div class="drift">
+        <canvas class="drift__dust" aria-hidden="true"></canvas>
+        <svg class="drift__svg" aria-hidden="true" preserveAspectRatio="none">
+          <g class="drift__decor"></g>
+          <path class="drift__route" fill="none"></path>
+          <path class="drift__trail" fill="none"></path>
+        </svg>
+        <div class="drift__nodes"></div>
+        <div class="drift__marker" aria-hidden="true"></div>
+      </div>
+
+      <div class="hero">
+        <p class="mono hero__eyebrow">(00) Selected work</p>
+        <h2 class="hero__title" data-split>Start with a site you'll love.</h2>
+        <p class="hero__sub" data-split><em>Scroll, and drift through the work.</em></p>
+        <p class="mono hero__hint"><span class="hero__hint-line"></span>Scroll to begin</p>
+      </div>
+
+      <div class="panels"></div>
+      <div class="beats"></div>
+
+      <div class="sea__copy">
+        <p class="mono">The archive</p>
+        <h2 class="sea__title"><span data-sea-count>0</span> screens<br><em>and counting.</em></h2>
+        <p class="sea__text">Fine, it's the same <span data-project-count></span> projects on repeat. Every one of them designed and built by hand, and the next one could be yours.</p>
+      </div>
+
+      <div class="hud">
+        <button class="hud__btn" data-hud-prev aria-label="Previous project">&#8592;</button>
+        <button class="hud__btn" data-hud-next aria-label="Next project">&#8594;</button>
+        <div class="hud__dots"></div>
+        <p class="mono hud__label" data-hud-label></p>
+      </div>
+    </section>
+
+    <div class="light">
+
+      <!-- About -->
+      <section class="about" id="about">
+        <p class="mono section-label">(01) About</p>
+        <p class="about__statement" data-words></p>
+        <div class="about__grid">
+          <h3 class="about__heading" data-reveal></h3>
+          <p class="about__body" data-reveal></p>
+        </div>
+        <dl class="stats"></dl>
+      </section>
+
+      <!-- Services -->
+      <section class="services" id="services">
+        <p class="mono section-label">(02) Services</p>
+        <h2 class="section-title" data-reveal>Four crafts,<br><em>one pair of hands.</em></h2>
+        <ol class="services__list"></ol>
+      </section>
+
+      <!-- Index -->
+      <section class="index" id="index">
+        <p class="mono section-label">(03) Index</p>
+        <h2 class="section-title" data-reveal>Everything,<br><em>in one list.</em></h2>
+        <ul class="index__list"></ul>
+        <div class="index__preview" aria-hidden="true"><img alt=""></div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Contact -->
+  <footer class="contact" id="contact">
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Available for new projects</span><span>&#10022;</span>
+        <span>Available for new projects</span><span>&#10022;</span>
+        <span>Available for new projects</span><span>&#10022;</span>
+        <span>Available for new projects</span><span>&#10022;</span>
+        <span>Available for new projects</span><span>&#10022;</span>
+        <span>Available for new projects</span><span>&#10022;</span>
+      </div>
+    </div>
+    <p class="mono section-label">(04) Contact</p>
+    <h2 class="contact__title" data-chars>Let's make something <em>that moves.</em></h2>
+    <a class="contact__mail" data-email data-cursor="Say hi"></a>
+    <div class="contact__foot">
+      <ul class="contact__socials"></ul>
+      <p class="mono"><span data-location></span> · <span data-time></span></p>
+      <p class="mono">&copy; <span data-year></span> <span data-name></span></p>
+      <a class="mono contact__top" href="#top">Back to top &#8593;</a>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/shots.js"></script>
+  <script src="js/sea.js"></script>
+  <script src="js/journey.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
